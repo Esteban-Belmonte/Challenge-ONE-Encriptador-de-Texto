@@ -10,24 +10,30 @@
   </head>
   <body>
     <main>
-     
-        <section class="encriptador"></section>
-     
-         <img src="recursos/Logo.png" />
+
+      <header>
+     <img src="recursos/Logo.png" class="logoAlura" />
+      <header>
+
+        <section class="encriptador">  
          <div class="textoParaEncriptar">
-          <textarea name="textoAEncriptar" id="" cols="30" rows="10"></textarea>
-         </div>
+          <form name="formulario" action="">
+          <textarea name="textoAEncriptar" id="" cols="50" rows="18" placeholder="Ingrese su texto aqui"></textarea>
+          </form>
          <p class="advertencia">Solo letras minusculas y sin acentos</p>
          <div class="botonesEncriptar">
           <button class="botonEncriptar">Encriptar</button>
          <button class="botonDesencriptar">Desenciptar</button>
         </div>
-      
+        </div>
+      </section>  
+
       <section class="resultado">
         <div class="zonaResultado">
-            <img src="recursos/Muñeco.png" alt="">
+            <img src="recursos/Muñeco.png" alt="" class="imagenMuñeco">
             <p class="mensajeVacio">Ningún mensaje fue encontrado</p>
             <p>ingresa el texto que deseas encriptar o desencriptar</p>
+            <button class="botonCopiar">¡Copiar!</button>
         </div>
       </section>
      
