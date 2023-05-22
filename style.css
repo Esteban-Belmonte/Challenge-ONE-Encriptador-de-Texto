@@ -60,9 +60,11 @@ button {
     float: right;
 }
 .zonaResultado{
+   position: relative;
     border-radius: 20px;
     background: rgba(255, 255, 255, 1);
     height: 80vh;
+    width: 40vh;
     padding: 4%;
     text-align: center;
 }
@@ -74,7 +76,7 @@ button {
     padding: 30% 0 20% 0;
 }
 
-.botonCopiar{
+#botonCopiar{
     background: rgba(216, 223, 232, 1) ;
     color:rgba(10, 56, 113, 1);
 }

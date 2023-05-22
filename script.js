@@ -71,14 +71,22 @@ function ocultarElementos() {
     elementosOcultos[i].hidden = true;
   }
 
-  let elementosVisibles = document.getElementsByClassName("botonCopiar");
+   document.getElementById('botonCopiar').hidden = false;
+
+  /*let elementosVisibles = document.getElementsByClassName("botonCopiar");
 
   for (var i = 0; i < elementosVisibles.length; i++) {
     elementosVisibles[i].hidden = false;
-  }
+  } */
 }
 
-/*
+
 function copiarTexto() {
 
-} */
+let texto = document.getElementById('resultado');
+let boton = document.getElementById('botonCopiar');
+
+navigator.clipboard.writeText(texto.textContent);
+boton.textContent="Copiado"
+
+} 
