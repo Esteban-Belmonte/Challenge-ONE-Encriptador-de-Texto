@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="reset.css" />
     <link rel="stylesheet" href="style.css" />
+    <script src="https://kit.fontawesome.com/ff75c912f9.js" crossorigin="anonymous"></script>
     <title>Encriptador de texto</title>
   </head>
   <body>
@@ -18,9 +19,9 @@
         <section class="encriptador">  
          <div class="textoParaEncriptar">
           <form name="formulario" action="">
-          <textarea name="textoAEncriptar" id="textoAConvertir" cols="50" rows="18" placeholder="Ingrese su texto aqui"></textarea>
+          <textarea name="textoAConvertir" id="textoAConvertir" cols="30" rows="18" placeholder="Ingrese su texto aqui"></textarea>
           </form>
-         <p class="advertencia">Solo letras minusculas y sin acentos</p>
+         <p class="advertencia"><img src="recursos/Vector.png" class="iconoAdvertencia">  Solo letras minusculas y sin acentos</p>
          <div class="botonesEncriptar">
           <button class="botonEncriptar" onclick="ConvertirTexto('encriptar')">Encriptar</button>
          <button class="botonDesencriptar" onclick="ConvertirTexto('desencriptar')">Desencriptar</button>
@@ -31,7 +32,7 @@
       <section class="resultado">
         <div class="zonaResultado">
             <img src="recursos/Muñeco.png" alt="" class="imagenMuñeco elementosOcultos">
-            <p class="mensajeVacio elementosOcultos">Ningún mensaje fue encontrado</p>
+            <p class="mensajeVacio elementosOcultos">Ningún mensaje fue <br>encontrado</p>
             <p class="textoSeñal elementosOcultos">ingresa el texto que deseas encriptar o desencriptar</p>
             <p id="resultado"></p>
             <button id="botonCopiar" hidden onclick="copiarTexto()">¡Copiar!</button>
@@ -41,8 +42,11 @@
       <footer>
         <p>Proyecto para oracle One Next Education</p>
         <p>Autor: Esteban Daniel Belmonte</p>
-        <a href="https://www.linkedin.com/in/esteban-daniel-belmonte-52a26a162/">Mi linkedin</a>
-        <a href="https://github.com/Esteban-Belmonte">Mi github</a>
+        <div class="links">
+          <a href="https://biolink.website/EstebanBelmonte" target="_blank"><i class="fa-solid fa-address-book"></i></a>
+          <a href="https://linkedin.com/in/esteban-daniel-belmonte-52a26a162" target="_blank"><i class="fab fa-linkedin"></i></a>
+           <a href="https://github.com/Esteban-Belmonte" target="_blank"><i class="fab fa-github"></i></a>
+        </div>
       </footer>
     </main>
 

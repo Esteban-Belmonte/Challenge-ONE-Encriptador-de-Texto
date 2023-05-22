@@ -6,12 +6,13 @@ body{
 .logoAlura {
     padding: 1% 0 1% 0;
     width: 84px;
-    height: 40px;
+    height: 50%;
 }
 
 .encriptador {
  float: left;
-/* width: 50%; */
+ width: 100vh;
+ height: 100vh;
 }
 
 .textoParaEncriptar{
@@ -34,23 +35,34 @@ textarea::placeholder{
     font-family: 'Inter';
 }
 
+.advertencia{
+    color: #495057;
+    display: flex;
+  align-items: center;
+}
+
+.iconoAdvertencia{
+    margin-right: 1%;
+}
+
 button {
     align-items: center;
     width: 200px;
     height: 50px;
     border-radius: 30px;
     font-family: 'Inter';
-    font-size: 1em;
+    font-size: 1em; 
 }
 
 .botonEncriptar{
  background: rgba(10, 56, 113, 1);
     color:rgba(255, 255, 255, 1);
+  
 
 }
 
 .botonDesencriptar{
-    margin-left: 5%;
+    margin-left: 10%; 
     background: rgba(216, 223, 232, 1) ;
     color:rgba(10, 56, 113, 1);
 }
@@ -63,25 +75,266 @@ button {
    position: relative;
     border-radius: 20px;
     background: rgba(255, 255, 255, 1);
-    height: 80vh;
-    width: 40vh;
+    height: 85vh;
+    width: 370px;
     padding: 4%;
     text-align: center;
+    box-sizing: border-box;
+}
+
+#resultado {
+    color: rgba(73, 80, 87, 1);
+    font-size: 1.3em;
+
 }
 
 .imagenMuñeco{
     object-fit: contain;
-    max-width: 100%;
-    max-height: 100%;
-    padding: 30% 0 20% 0;
+    max-width: 90%;
+    max-height: 90%;
+    padding: 20% 0 20% 0;
+}
+
+.mensajeVacio{
+    color:  rgb(32, 35, 37);
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.textoSeñal{
+    margin-top: 5%;
+    color: #495057;
+    font-style: normal;
+ font-weight: 400;
+ font-size: 17px;
+ line-height: 150%;
 }
 
 #botonCopiar{
+    position: absolute;
     background: rgba(216, 223, 232, 1) ;
     color:rgba(10, 56, 113, 1);
+    top: calc(100% - 14%);
+    right: 20%;
 }
 
 footer {
     clear: both;
 }
 
+
+footer {
+    background-color: #b8b0b0;
+    padding: 10px;
+    text-align: center;
+    font-size: 1em;
+  }
+  
+  footer p {
+    margin-bottom: 10px;
+    font-size: 14px;
+  }
+
+  .links a {
+    display: inline-block;
+    margin-right: 10px;
+    color: #ebeff3; 
+     margin: 10px;
+    padding: 10px;
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: all 300ms;
+  }
+  
+  .links a:hover {
+    background-color: rgb(224, 104, 104);
+    color: black;
+  }
+
+  .links i{
+    font-size: 1.5rem;
+  }
+  
+  button {
+    position: relative;
+    padding: 5px 10px;
+    border-radius: 7px;
+    border: 1px solid rgb(61, 106, 255);
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 2px;
+    background: transparent;
+    color: #fff;
+    overflow: hidden;
+    box-shadow: 0 0 0 0 transparent;
+    -webkit-transition: all 0.2s ease-in;
+    -moz-transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in;
+  }
+  
+  button:hover {
+    background: rgb(61, 106, 255);
+    box-shadow: 0 0 30px 5px rgba(0, 142, 236, 0.815);
+    -webkit-transition: all 0.2s ease-out;
+    -moz-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+  }
+  
+  button:hover::before {
+    -webkit-animation: sh02 0.5s 0s linear;
+    -moz-animation: sh02 0.5s 0s linear;
+    animation: sh02 0.5s 0s linear;
+  }
+  
+  button::before {
+    content: "";
+    display: block;
+    width: 0px;
+    height: 86%;
+    position: absolute;
+    top: 7%;
+    left: 0%;
+    opacity: 0;
+    background: #fff;
+    box-shadow: 0 0 50px 30px #fff;
+    -webkit-transform: skewX(-20deg);
+    -moz-transform: skewX(-20deg);
+    -ms-transform: skewX(-20deg);
+    -o-transform: skewX(-20deg);
+    transform: skewX(-20deg);
+  }
+  
+  @keyframes sh02 {
+    from {
+      opacity: 0;
+      left: 0%;
+    }
+  
+    50% {
+      opacity: 1;
+    }
+  
+    to {
+      opacity: 0;
+      left: 100%;
+    }
+  }
+  
+  button:active {
+    box-shadow: 0 0 0 0 transparent;
+    -webkit-transition: box-shadow 0.2s ease-in;
+    -moz-transition: box-shadow 0.2s ease-in;
+    transition: box-shadow 0.2s ease-in;
+  }
+  
+
+/*Tablet*/
+/*Portrait*/
+@media (min-width: 576px) and (max-width: 991.98px) and (orientation:portrait) {
+    
+    .encriptador {
+        float: none;
+        padding: 0;
+    }
+    .resultado{
+        float: none;
+        padding: 5% 0 10% 20%;
+        height: 400px;
+         width: 400px;
+         padding: 4%;
+    }
+    
+    .imagenMuñeco{
+        visibility: hidden;
+    }
+    .botonDesencriptar{
+        margin: 5%;
+    }
+   button {
+    margin: 5%;
+   }
+}
+
+/*landscape*/
+@media (min-width: 991.98px) and (max-width: 1199.98px)and (orientation:landscape) {
+   
+    .encriptador {
+        float: none;
+        padding: 0;
+    }
+    .resultado{
+        float: none;
+        padding: 5% 0 10% 20%;
+        padding: 4%;
+    }
+   
+    .imagenMuñeco{
+        visibility: hidden;
+    }
+    .botonDesencriptar{
+        margin: 5%;
+    }
+    button {
+        margin: 5%;
+       }
+   
+}
+/*fin tablet*/
+
+/*movil*/
+/*Portrait*/
+/*Default*/
+@media (max-width: 575.98px)and (orientation:portrait) {
+   
+    .encriptador {
+        float: none;
+        padding: 0;
+    }
+    .resultado{
+        float: none;
+        padding: 5% 0 10% 20%;
+        padding: 4%;
+    }
+    .textoParaEncriptar{
+        padding: 4%;
+    }
+    .imagenMuñeco{
+        visibility: hidden;
+    }
+    .botonDesencriptar{
+        margin: 5%;
+    }
+    button {
+        margin: 5%;
+       }
+    
+ }
+/*landscape*/
+@media (min-width: 576px) and (max-width: 991.98px) and (orientation:landscape) {
+   
+    .encriptador {
+        float: none;
+        padding: 0;
+    }
+    .resultado{
+        float: none;
+        padding: 5% 0 10% 20%;
+        padding: 4%;
+    }
+    .textoParaEncriptar{
+        padding: 4%;
+    }
+    .imagenMuñeco{
+        visibility: hidden;
+    }
+    .botonDesencriptar{
+        margin: 5%;
+    }
+    button {
+        margin: 5%;
+       }
+    
+}
+/*fin movil*/
