@@ -18,22 +18,23 @@
         <section class="encriptador">  
          <div class="textoParaEncriptar">
           <form name="formulario" action="">
-          <textarea name="textoAEncriptar" id="" cols="50" rows="18" placeholder="Ingrese su texto aqui"></textarea>
+          <textarea name="textoAEncriptar" id="textoAConvertir" cols="50" rows="18" placeholder="Ingrese su texto aqui"></textarea>
           </form>
          <p class="advertencia">Solo letras minusculas y sin acentos</p>
          <div class="botonesEncriptar">
-          <button class="botonEncriptar">Encriptar</button>
-         <button class="botonDesencriptar">Desenciptar</button>
+          <button class="botonEncriptar" onclick="ConvertirTexto('encriptar')">Encriptar</button>
+         <button class="botonDesencriptar" onclick="ConvertirTexto('desencriptar')">Desencriptar</button>
         </div>
         </div>
       </section>  
 
       <section class="resultado">
         <div class="zonaResultado">
-            <img src="recursos/Muñeco.png" alt="" class="imagenMuñeco">
-            <p class="mensajeVacio">Ningún mensaje fue encontrado</p>
-            <p>ingresa el texto que deseas encriptar o desencriptar</p>
-            <button class="botonCopiar">¡Copiar!</button>
+            <img src="recursos/Muñeco.png" alt="" class="imagenMuñeco elementosOcultos">
+            <p class="mensajeVacio elementosOcultos">Ningún mensaje fue encontrado</p>
+            <p class="textoSeñal elementosOcultos">ingresa el texto que deseas encriptar o desencriptar</p>
+            <p id="resultado"></p>
+            <button class="botonCopiar" hidden onclick="copiarTexto()">¡Copiar!</button>
         </div>
       </section>
      
@@ -44,5 +45,7 @@
         <a href="https://github.com/Esteban-Belmonte">Mi github</a>
       </footer>
     </main>
+
+    <script src="script.js"></script>
   </body>
 </html>
