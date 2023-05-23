@@ -90,3 +90,8 @@ navigator.clipboard.writeText(texto.textContent);
 boton.textContent="Copiado"
 
 } 
+
+function cambiarModo() {
+  const body = document.body;
+  body.classList.toggle("tema-oscuro");
+}

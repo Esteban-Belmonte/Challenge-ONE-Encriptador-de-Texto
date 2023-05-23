@@ -9,6 +9,63 @@ body{
     height: 50%;
 }
 
+/*Comienzo boton tema claro/oscuro*/
+
+.cambioModo{
+    font-size: 17px;
+  position: absolute;
+  display: inline-block;
+  width: 3.5em;
+  height: 2em;
+  margin: 1%;
+  top: 0;
+  right: 0;
+}
+
+.cambioModo input{
+    opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+    --background: #28096b;
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--background);
+    transition: .5s;
+    border-radius: 30px;
+  }
+
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 1.4em;
+    width: 1.4em;
+    border-radius: 50%;
+    left: 10%;
+    bottom: 15%;
+    box-shadow: inset 8px -4px 0px 0px #fff000;
+    background: var(--background);
+    transition: .5s;
+  }
+  
+  input:checked + .slider {
+    background-color: #522ba7;
+  }
+  
+  input:checked + .slider:before {
+    transform: translateX(100%);
+    box-shadow: inset 15px -4px 0px 15px #fff000;
+  }
+
+/*Fin boton tema claro/oscuro*/
+
+
 .encriptador {
  float: left;
  width: 100vh;
@@ -229,7 +286,56 @@ footer {
     transition: box-shadow 0.2s ease-in;
   }
   
+/*Codigo modo oscuro*/
 
+
+body.tema-oscuro {
+    color: #333333;
+    background-color: #222222;
+}
+
+.tema-oscuro button {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.tema-oscuro .textoParaEncriptar textarea {
+    background-color: #222222;
+    color: aliceblue;
+}
+.tema-oscuro .textoParaEncriptar textarea::placeholder{
+    color: rgb(139, 196, 247);
+}
+
+.tema-oscuro .advertencia{
+    color: #ffffcc;
+}
+
+
+.tema-oscuro .zonaResultado{
+    background-color: #222222;
+}
+
+.tema-oscuro .mensajeVacio{
+    color: rgb(139, 196, 247);
+}
+
+.tema-oscuro .textoSeñal{
+    color: #ffffcc;
+}
+
+.tema-oscuro #resultado{
+    color: aliceblue;
+}
+
+.tema-oscuro footer{
+    background-color: #333333;
+    color: rgb(139, 196, 247);
+}
+
+
+
+  /*Codigo para Responsive*/
 /*Tablet*/
 /*Portrait*/
 @media (min-width: 576px) and (max-width: 991.98px) and (orientation:portrait) {
